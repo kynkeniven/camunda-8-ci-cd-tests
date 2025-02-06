@@ -25,18 +25,21 @@
       <bpmn:outgoing>Flow_1jbj6ja</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Flow_196kgjl" sourceRef="Activity_0yocazz" targetRef="Event_0xadgr3" />
-    <bpmn:userTask id="Activity_0yocazz" name="Task C">
+    <bpmn:serviceTask id="Activity_0yocazz" name="Service Task C">
       <bpmn:extensionElements>
-        <zeebe:userTask />
+        <zeebe:taskDefinition type="foo" />
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_1jbj6ja</bpmn:incoming>
       <bpmn:outgoing>Flow_196kgjl</bpmn:outgoing>
-    </bpmn:userTask>
+    </bpmn:serviceTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_Test">
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
         <dc:Bounds x="150" y="100" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0xadgr3_di" bpmnElement="Event_0xadgr3">
+        <dc:Bounds x="672" y="100" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_06kfybq_di" bpmnElement="Activity_1ddtxp0">
         <dc:Bounds x="240" y="78" width="100" height="80" />
@@ -45,10 +48,7 @@
       <bpmndi:BPMNShape id="Activity_1lnpzif_di" bpmnElement="Activity_0u7iob6">
         <dc:Bounds x="380" y="78" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0xadgr3_di" bpmnElement="Event_0xadgr3">
-        <dc:Bounds x="672" y="100" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_07pinfr_di" bpmnElement="Activity_0yocazz">
+      <bpmndi:BPMNShape id="Activity_1qumfm4_di" bpmnElement="Activity_0yocazz">
         <dc:Bounds x="520" y="78" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
