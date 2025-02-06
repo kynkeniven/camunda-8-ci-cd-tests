@@ -30,11 +30,25 @@
 		<java.version>21</java.version>
 		<maven.compiler.source>21</maven.compiler.source>
 		<maven.compiler.target>21</maven.compiler.target>
+		<camunda.version>8.6.7</camunda.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.camunda</groupId>
+			<artifactId>spring-boot-starter-camunda-sdk</artifactId>
+			<version>${camunda.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.camunda</groupId>
+			<artifactId>camunda-process-test-spring</artifactId>
+			<version>${camunda.version}</version>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
@@ -56,6 +70,9 @@
 				<version>3.13.0</version>
 				<configuration>
 					<release>21</release>
+					<compilerArgs>
+						<arg>-parameters</arg>
+					</compilerArgs>
 				</configuration>
 			</plugin>
 		</plugins>
