@@ -25,10 +25,13 @@
       <bpmn:outgoing>Flow_1jbj6ja</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Flow_196kgjl" sourceRef="Activity_0yocazz" targetRef="Event_0xadgr3" />
-    <bpmn:manualTask id="Activity_0yocazz" name="Manual task">
+    <bpmn:serviceTask id="Activity_0yocazz" name="Service task">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="foo" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_1jbj6ja</bpmn:incoming>
       <bpmn:outgoing>Flow_196kgjl</bpmn:outgoing>
-    </bpmn:manualTask>
+    </bpmn:serviceTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_Test">
@@ -45,7 +48,7 @@
       <bpmndi:BPMNShape id="Activity_1lnpzif_di" bpmnElement="Activity_0u7iob6">
         <dc:Bounds x="380" y="78" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0iumaxn_di" bpmnElement="Activity_0yocazz">
+      <bpmndi:BPMNShape id="Activity_0a2hyo0_di" bpmnElement="Activity_0yocazz">
         <dc:Bounds x="520" y="78" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
