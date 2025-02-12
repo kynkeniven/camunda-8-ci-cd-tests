@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="2c23077" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.6.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="b08e09c" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.6.0">
   <bpmn:process id="Process_Test" name="Process Test" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1">
       <bpmn:outgoing>Flow_1eunxyx</bpmn:outgoing>
@@ -25,13 +25,10 @@
       <bpmn:outgoing>Flow_1jbj6ja</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Flow_196kgjl" sourceRef="Activity_0yocazz" targetRef="Event_0xadgr3" />
-    <bpmn:serviceTask id="Activity_0yocazz" name="Service Task C">
-      <bpmn:extensionElements>
-        <zeebe:taskDefinition type="foo" />
-      </bpmn:extensionElements>
+    <bpmn:manualTask id="Activity_0yocazz" name="Manual task">
       <bpmn:incoming>Flow_1jbj6ja</bpmn:incoming>
       <bpmn:outgoing>Flow_196kgjl</bpmn:outgoing>
-    </bpmn:serviceTask>
+    </bpmn:manualTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_Test">
@@ -48,7 +45,7 @@
       <bpmndi:BPMNShape id="Activity_1lnpzif_di" bpmnElement="Activity_0u7iob6">
         <dc:Bounds x="380" y="78" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1qumfm4_di" bpmnElement="Activity_0yocazz">
+      <bpmndi:BPMNShape id="Activity_0iumaxn_di" bpmnElement="Activity_0yocazz">
         <dc:Bounds x="520" y="78" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
