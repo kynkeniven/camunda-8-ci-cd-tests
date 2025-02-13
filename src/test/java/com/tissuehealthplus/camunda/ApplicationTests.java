@@ -3,8 +3,8 @@ package com.tissuehealthplus.camunda;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class CamundaApplicationTests {
+
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {
