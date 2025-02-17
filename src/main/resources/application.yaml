@@ -1,0 +1,8 @@
+camunda:
+  client:
+    mode: saas
+    auth:
+      client-id: ArzcO8YXXxcHCNjrRKynMxah84CXwD1k
+      client-secret: _zKSh3WpGwl9p-fAipWsW-5waj1-TxTJWCgbyV9.4UcQgcmUFnP9.MmhmeI9pfMa
+    cluster-id: 0e5ef6db-e64b-41e1-9bf0-f5883be7542d
+    region: dsm-1
