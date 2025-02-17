@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0aibl84" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.24.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.5.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0aibl84" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="22173ef" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.5.0">
   <bpmn:process id="Process_Example" name="Process Example" isExecutable="true">
     <bpmn:startEvent id="StartEvent_ExampleRequested">
       <bpmn:outgoing>Flow_1klrv2f</bpmn:outgoing>
@@ -17,7 +17,7 @@
       <bpmn:incoming>Flow_1klrv2f</bpmn:incoming>
       <bpmn:outgoing>Flow_04ergfk</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:receiveTask id="Task_Bar" name="Bar Task" messageRef="Message_1q7kjj0">
+    <bpmn:receiveTask id="Task_Bar" name="Bar Task1" messageRef="Message_1q7kjj0">
       <bpmn:incoming>Flow_04ergfk</bpmn:incoming>
       <bpmn:outgoing>Flow_0vvgwi2</bpmn:outgoing>
     </bpmn:receiveTask>
