@@ -19,15 +19,15 @@ This PoC demonstrates how to integrate Web Modeler with a GitHub repository, tri
 
 #### 🔹 Connecting Your Git Repository
 
-![Button to connect your repository](.tutorial/connect to repository.png)
+![Button to connect your repository](.tutorial/connect-to-repository.png)
 
 #### 🔹 Example: Git Sync Setup
 
-![GitSync Setup](.tutorial/sync button setup.png)
+![GitSync Setup](.tutorial/sync-button-setup.png)
 
 #### 🔹 After Git Sync Setup
 
-![GitSync done](.tutorial/github synced.png)
+![GitSync done](.tutorial/github-synced.png)
 
 ### 4. Sync Your Diagrams
 
@@ -35,17 +35,17 @@ This PoC demonstrates how to integrate Web Modeler with a GitHub repository, tri
 
 #### 🔹 Git Sync Button Pressed
 
-![GitSync open](.tutorial/pop up sync button pressed.png)
+![GitSync open](.tutorial/pop-up-sync-button-pressed.png)
 
 #### 🔹 After Sync
 
-![After sync](.tutorial/after sync.png)
+![After sync](.tutorial/after-sync.png)
 
 ### 5. Check Your Pipeline
 
 - Once synced, your CI/CD pipeline will run tests and deploy your diagrams to the cluster.
 
-![Pipeline running](.tutorial/pipeline running.png)
+![Pipeline running](.tutorial/pipeline-running.png)
 
 ### 6. Configure Camunda Cluster Credentials
 
