@@ -1,5 +1,11 @@
-# Tissue Health and Plus Camunda Workflows Tests
+# Camunda 8 CI/CD and Tests
 
+This PoC demonstrates how to integrate your Web Modeler with a GitHub repository, triggering the CI/CD pipeline to run BPMN tests and deploy the diagrams to your cluster.
+
+1. At your Project folder in WebModeler create a new `Process Application`
+2. Create a Github App at your Github account. Follow the steps below
+`https://docs.camunda.io/docs/next/components/modeler/web-modeler/git-sync/`
+3. Follow the steps in the link above to Sync your `Process Application` to your Github repositoy
 
 
 - Currently using Zeebe Process Test (ZPT) for tests, a stable test library
