@@ -17,7 +17,7 @@
       <bpmn:incoming>Flow_1klrv2f</bpmn:incoming>
       <bpmn:outgoing>Flow_04ergfk</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:receiveTask id="Task_Bar" name="Bar Task1" messageRef="Message_1q7kjj0">
+    <bpmn:receiveTask id="Task_Bar" name="Bar Task" messageRef="Message_1q7kjj0">
       <bpmn:incoming>Flow_04ergfk</bpmn:incoming>
       <bpmn:outgoing>Flow_0vvgwi2</bpmn:outgoing>
     </bpmn:receiveTask>
