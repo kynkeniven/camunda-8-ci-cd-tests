@@ -1,4 +1,4 @@
-package com.tissuehealthplus.camunda;
+package com.example.camunda;
 
 import io.camunda.zeebe.spring.client.annotation.Deployment;
 import org.springframework.boot.SpringApplication;

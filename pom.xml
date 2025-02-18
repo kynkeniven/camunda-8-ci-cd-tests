@@ -8,7 +8,7 @@
 		<version>3.4.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.tissuehealthplus</groupId>
+	<groupId>com.example</groupId>
 	<artifactId>camunda</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>camunda</name>

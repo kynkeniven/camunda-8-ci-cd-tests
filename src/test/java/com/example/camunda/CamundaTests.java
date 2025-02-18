@@ -1,4 +1,4 @@
-package com.tissuehealthplus.camunda;
+package com.example.camunda;
 
 import io.camunda.zeebe.client.ZeebeClient;
 import io.camunda.zeebe.client.api.response.ProcessInstanceEvent;

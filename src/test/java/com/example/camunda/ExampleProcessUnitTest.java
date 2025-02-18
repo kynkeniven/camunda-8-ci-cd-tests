@@ -1,4 +1,4 @@
-package com.tissuehealthplus.camunda;
+package com.example.camunda;
 
 import io.camunda.zeebe.spring.test.ZeebeSpringTest;
 import org.junit.jupiter.api.Test;
