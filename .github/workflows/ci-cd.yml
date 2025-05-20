@@ -25,7 +25,43 @@ jobs:
           restore-keys: |
             maven-${{ runner.os }}
       - name: Run application tests
-        run: mvn test
+        run: mvn clean test -Dspring.profiles.active=unit-test
+      - name: Validate Process Test Coverage = 100% Per Report.json
+        run: |
+          set -e
+          echo "Validating individual coverage for each report.json..."
+
+          failed=0
+
+          for json in target/process-test-coverage/*/report.json; do
+            echo "Checking $json"
+
+            covered=$(jq -r '[.suites[].runs[].events[].definitionKey] | unique | length' "$json")
+            expected=$(jq -r '.models[].totalElementCount' "$json")
+
+            if [ "$expected" -eq 0 ]; then
+              echo "⚠️  Skipping $json: No expected elements found"
+              continue
+            fi
+
+            percent=$((100 * covered / expected))
+
+            echo "Covered elements: $covered / Expected: $expected => ${percent}%"
+
+            if [ "$percent" -lt 100 ]; then
+              echo "❌ Coverage too low for $json: ${percent}%"
+              failed=1
+            else
+              echo "✅ Coverage OK for $json: ${percent}%"
+            fi
+          done
+
+          if [ "$failed" -eq 1 ]; then
+            echo "❌ One or more test files did not reach 100% coverage."
+            exit 1
+          else
+            echo "✅ All test files passed the 100% coverage threshold."
+          fi
 
   build:
     name: Build runner
@@ -45,6 +81,12 @@ jobs:
           key: maven-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             maven-${{ runner.os }}
+      - name: Export environment secrets
+        run: |
+            echo "CAMUNDA_CLIENT_ID=${{ secrets.CAMUNDA_CLIENT_ID }}" >> $GITHUB_ENV
+            echo "CAMUNDA_CLIENT_SECRET=${{ secrets.CAMUNDA_CLIENT_SECRET }}" >> $GITHUB_ENV
+            echo "CAMUNDA_CLUSTER_ID=${{ secrets.CAMUNDA_CLUSTER_ID }}" >> $GITHUB_ENV
+            echo "CAMUNDA_CLUSTER_REGION=${{ secrets.CAMUNDA_CLUSTER_REGION }}" >> $GITHUB_ENV
       - name: Build with Maven
         run: mvn package -Dmaven.test.skip=true --file pom.xml
       - name: Run with Maven

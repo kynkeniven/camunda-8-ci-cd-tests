@@ -1,0 +1,9 @@
+#Camunda SaaS connection with fake values just to run the tests in memory
+camunda:
+  client:
+    mode: saas
+    auth:
+      client-id: dummy
+      client-secret: dummy
+    cluster-id: dummy
+    region: dummy

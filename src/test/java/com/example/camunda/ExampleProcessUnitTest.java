@@ -1,8 +1,11 @@
 package com.example.camunda;
 
 import io.camunda.zeebe.spring.test.ZeebeSpringTest;
+import org.camunda.community.process_test_coverage.junit5.platform8.ProcessEngineCoverageExtension;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import java.util.Collections;
 import java.util.Map;
@@ -11,11 +14,10 @@ import static io.camunda.zeebe.process.test.assertions.BpmnAssert.assertThat;
 import static io.camunda.zeebe.spring.test.ZeebeTestThreadSupport.waitForProcessInstanceCompleted;
 
 
-@SpringBootTest(
-        properties = {
-                "camunda.client.worker.defaults.enabled=false" // disable all job workers
-        })
+@SpringBootTest
 @ZeebeSpringTest
+@ActiveProfiles("unit-test")
+@ExtendWith(ProcessEngineCoverageExtension.class)
 class ExampleProcessUnitTest extends CamundaTests {
 
 
